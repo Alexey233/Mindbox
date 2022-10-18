@@ -10,9 +10,10 @@ namespace Mindbox.Square
             Radius = radius;
         }
 
-        protected override void Validate()
+        protected override bool Validate()
         {
-            IsValid = Radius >= 0;
+            if (Radius >= 0) return true;
+            else return false;
         }
 
         protected override void CalculateShape()

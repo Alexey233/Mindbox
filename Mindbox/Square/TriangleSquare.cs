@@ -13,14 +13,16 @@
             C = c;
         }
 
-        protected override void Validate()
+        protected override bool Validate()
         {
-            IsValid = A >= 0 
-                || B >= 0 
+            if (A >= 0
+                || B >= 0
                 || C >= 0
                 || (A > (B + C)
                 || A > (B + C)
-                || C > (A + B));
+                || C > (A + B))) return true;
+
+            else return false;
         }
 
         protected override void CalculateShape()

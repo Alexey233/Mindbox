@@ -1,6 +1,7 @@
 ﻿using System;
 using Mindbox.Square;
 
+
 namespace Mindbox
 {
     class Program
@@ -15,7 +16,7 @@ namespace Mindbox
             
             var circle = new CircleSquare(10);
 
-            var shapes = new ISquare[] { triangle1, circle };
+            var shapes = new ISquare[] { triangle1, triangle2, circle };
 
             foreach (var shape in shapes)
             {

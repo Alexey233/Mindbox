@@ -5,14 +5,9 @@ namespace Mindbox.Square
     public abstract class ShapeSquare : ISquare
     {
         public double Square { get; protected set; }
-
-        public bool IsValid { get; protected set; }
-
         public double Calculate()
-        {
-            Validate();
-
-            if (IsValid)
+        { 
+            if (Validate())
             {
                 CalculateShape();
                 return Square;
@@ -20,7 +15,7 @@ namespace Mindbox.Square
             return 0;
         }
         
-        protected abstract void Validate();
+        protected abstract bool Validate();
 
         protected abstract void CalculateShape();
     }
