@@ -16,11 +16,11 @@
         protected override bool Validate()
         {
             if (A >= 0
-                || B >= 0
-                || C >= 0
-                || (A > (B + C)
-                || A > (B + C)
-                || C > (A + B))) return true;
+                && B >= 0
+                && C >= 0
+                && (A > (B + C)
+                && A > (B + C)
+                && C > (A + B))) return true;
 
             else return false;
         }
